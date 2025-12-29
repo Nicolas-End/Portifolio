@@ -1,5 +1,11 @@
+'use client';
 import Image from "next/image";
 export default function Home() {
+  const socials = [
+  { name: "github", url: "https://github.com/Nicolas-End" },
+  { name: "linkedin", url: "https://www.linkedin.com/in/nicolas-silva-4094352b8/" },
+  { name: "email", url: "mailto:nicolasvalsi203@gmail.com" },
+];
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden cursor-default">
       <div className="absolute inset-0 bg-[url('/bg-hero.png')] bg-cover bg-center opacity-40" />
@@ -49,7 +55,8 @@ export default function Home() {
                   ].map((item) => (
                     <li key={item.name}>
                       <button
-                        className="group w-full text-left px-4 py-3 rounded-xl
+
+                        className="hover:cursor-pointer group w-full text-left px-4 py-3 rounded-xl
                                    transition-all duration-300 ease-out
                                    hover:bg-white/5 hover:pl-6
                                    relative overflow-hidden"
@@ -71,18 +78,19 @@ export default function Home() {
               </nav>
 
               <div className="flex gap-3 pt-4">
-                {["github", "linkedin", "email"].map((social) => (
+                {socials.map((social) => (
                   <button
-                    key={social}
-                    className="size-10 rounded-lg bg-white/5 hover:bg-white/10 
+                    key={social.name}
+                    onClick={() => window.open(social.url, "_blank")}
+                    className=" cursor-pointer size-10 rounded-lg bg-white/5 hover:bg-white/10 
                                flex items-center justify-center
                                transition-all duration-300 hover:scale-110
                                border border-white/10 hover:border-cyan-400/50"
                   >
                     <span className="text-slate-400 hover:text-cyan-400 transition-colors text-sm">
-                      {social === "github" && "GH"}
-                      {social === "linkedin" && "IN"}
-                      {social === "email" && "✉"}
+                      {social.name === "github" && "GH"}
+                      {social.name === "linkedin" && "IN"}
+                      {social.name === "email" && "✉"}
                     </span>
                   </button>
                 ))}
@@ -117,7 +125,7 @@ export default function Home() {
 
               <div className="grid sm:grid-cols-3 gap-4 cursor-pointer">
                 {[
-                  { label: "Anos de Experiência", value: "2+", icon: "⏱️" },
+                  { label: "Anos de Experiência", value: "3+", icon: "⏱️" },
                   { label: "Projetos Completos", value: "15+", icon: "✓" },
                   { label: "APIs Criadas", value: "6+", icon: "🔌" },
                 ].map((stat) => (
