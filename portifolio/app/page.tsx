@@ -1,6 +1,8 @@
 'use client';
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 export default function Home() {
+  const router =  useRouter();
   const socials = [
   { name: "github", url: "https://github.com/Nicolas-End" },
   { name: "linkedin", url: "https://www.linkedin.com/in/nicolas-silva-4094352b8/" },
@@ -49,13 +51,13 @@ export default function Home() {
               <nav>
                 <ul className="space-y-1">
                   {[
-                    { name: "Sobre Mim", icon: "👨‍💻" },
-                    { name: "Projetos", icon: "🚀" },
-                    { name: "Contato", icon: "💬" },
+                    { name: "Sobre Mim", icon: "👨‍💻" , linkName:"/sobre-mim"},
+                    { name: "Projetos", icon: "🚀", linkName: "/projetos" },
+                    { name: "Contato", icon: "💬", linkName: "/contato" },
                   ].map((item) => (
                     <li key={item.name}>
                       <button
-
+                        onClick={() => router.push(item.linkName)}
                         className="hover:cursor-pointer group w-full text-left px-4 py-3 rounded-xl
                                    transition-all duration-300 ease-out
                                    hover:bg-white/5 hover:pl-6

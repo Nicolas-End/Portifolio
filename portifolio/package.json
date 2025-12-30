@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@tsparticles/react": "^3.0.0",
+    "axios": "^1.13.2",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "router": "^2.2.0",
     "tsparticles": "^3.9.1"
   },
   "devDependencies": {
