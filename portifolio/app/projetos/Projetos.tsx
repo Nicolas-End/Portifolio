@@ -13,7 +13,7 @@ export default function Projects({ projects }: Props) {
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
 
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 animate-float"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, rgb(51 65 85 / 0.3) 1px, transparent 0)`,
           backgroundSize: "40px 40px",
@@ -24,12 +24,12 @@ export default function Projects({ projects }: Props) {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="mb-16 space-y-6">
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/20">
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/20 animate-fade-in">
               <div className="size-2 rounded-full bg-cyan-400 animate-pulse" />
               <span className="text-cyan-400 text-sm font-medium">Portfolio</span>
             </div>
 
-            <div>
+            <div className="animate-fade-in-delay-1">
               <h1 className="text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight text-balance">
                 Projetos Realizados
               </h1>
@@ -39,15 +39,15 @@ export default function Projects({ projects }: Props) {
             </div>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-6 pt-4">
-              <div className="flex items-center gap-3 px-6 py-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+            <div className="flex flex-wrap gap-6 pt-4 animate-fade-in-delay-2">
+              <div className="flex items-center gap-3 px-6 py-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:scale-105 hover:border-cyan-400/30 transition-all duration-300">
                 <div className="text-2xl">📦</div>
                 <div>
                   <div className="text-2xl font-bold text-white">{projects?.length || "0"}</div>
                   <div className="text-sm text-slate-400">Total de Projetos</div>
                 </div>
               </div>
-              <div className="flex items-center gap-3 px-6 py-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+              <div className="flex items-center gap-3 px-6 py-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:scale-105 hover:border-cyan-400/30 transition-all duration-300">
                 <div className="text-2xl">⭐</div>
                 <div>
                   <div className="text-2xl font-bold text-white">
@@ -67,9 +67,10 @@ export default function Projects({ projects }: Props) {
                   key={idx}
                   className="group rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 
                            hover:bg-white/10 hover:border-cyan-400/30
-                           transition-all duration-300 hover:scale-[1.02]
+                           transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1
                            overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-cyan-500/10
-                           flex flex-col"
+                           flex flex-col animate-fade-in-up"
+                  style={{ animationDelay: `${idx * 0.1}s` }}
                 >
                   <div className="p-6 flex-1 flex flex-col">
                     {/* Project Title and Description */}
@@ -182,7 +183,7 @@ export default function Projects({ projects }: Props) {
               ))}
             </div>
           ) : (
-            <div className="text-center py-16">
+            <div className="text-center py-16 animate-fade-in">
               <div className="inline-flex items-center justify-center size-16 rounded-full bg-white/5 border border-white/10 mb-4">
                 <span className="text-2xl">📦</span>
               </div>
@@ -191,8 +192,8 @@ export default function Projects({ projects }: Props) {
           )}
 
           {/* Bottom CTA */}
-          <div className="mt-20 text-center">
-            <div className="inline-block rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 p-8 max-w-2xl mx-auto hover:border-cyan-400/30 transition-all duration-300">
+          <div className="mt-20 text-center animate-fade-in-delay-3">
+            <div className="inline-block rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 p-8 max-w-2xl mx-auto hover:border-cyan-400/30 hover:scale-105 transition-all duration-300">
               <div className="flex items-center justify-center gap-2 mb-4">
                 <span className="text-3xl">💼</span>
                 <h3 className="text-2xl font-bold text-white">Interessado em trabalhar juntos?</h3>
@@ -214,7 +215,7 @@ export default function Projects({ projects }: Props) {
           </div>
 
           {/* Back to Home */}
-          <div className="mt-12 text-center">
+          <div className="mt-12 text-center animate-fade-in-delay-4">
             <a
               href="/"
               className="inline-flex items-center gap-2 text-slate-400 hover:text-cyan-400 
