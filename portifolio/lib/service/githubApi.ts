@@ -10,7 +10,7 @@ export interface GithubApiPublicRepo{
     forks_count: number;
     stargazers_count: number;
     open_issues_count: number;
-    
+    topics : string[];
 
 }
 

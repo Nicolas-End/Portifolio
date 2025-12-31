@@ -34,7 +34,7 @@ export default function Projects({ projects }: Props) {
                 Projetos Realizados
               </h1>
               <p className="text-xl text-slate-400 max-w-2xl leading-relaxed">
-                Projetos desenvolvidos com foco em soluções back-end, aplicando boas práticas, integração com bancos de dados e APIs, sempre buscando código limpo e escalável
+                Soluções back-end robustas e escaláveis desenvolvidas com as melhores práticas de desenvolvimento
               </p>
             </div>
 
@@ -92,6 +92,23 @@ export default function Projects({ projects }: Props) {
                           <span className="size-2 rounded-full bg-cyan-400" />
                           {project.language}
                         </span>
+                      </div>
+                    )}
+
+                    {/* Topics Section */}
+                    {project.topics && project.topics.length > 0 && (
+                      <div className="mb-4">
+                        <div className="flex flex-wrap gap-2">
+                          {project.topics.map((topic) => (
+                            <span
+                              key={topic}
+                              className="px-2.5 py-1 rounded-lg bg-slate-800/50 text-slate-300 text-xs font-medium
+                                         border border-white/5 group-hover:border-cyan-400/20 transition-colors"
+                            >
+                              {topic}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     )}
 
