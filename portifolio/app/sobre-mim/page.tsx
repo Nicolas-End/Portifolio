@@ -149,6 +149,57 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
+            
+            <div className="rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-8">
+              <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <span className="size-10 rounded-xl bg-gradient-to-br from-cyan-400/20 to-blue-500/20 flex items-center justify-center border border-cyan-400/30">
+                  🎓
+                </span>
+                Formação Acadêmica
+              </h2>
+
+              <div className="space-y-6">
+                <div className="relative pl-8 border-l-2 border-cyan-400/30">
+                  <div className="absolute left-0 top-0 -translate-x-1/2 size-4 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/50" />
+
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <span className="px-2 py-1 rounded bg-cyan-400/20 text-cyan-300 text-xs font-bold border border-cyan-400/30">
+                        2026 - 2030
+                      </span>
+                      <h3 className="text-white font-bold text-lg">Graduação</h3>
+                    </div>
+
+                    <p className="text-cyan-400 font-medium">UNIFAJ - Centro Universitário de Jaguariúna</p>
+
+                    <p className="text-slate-300 text-sm mt-3">
+                      Cursando Bacharelado em Ciência da Computação, focado em desenvolvimento de software, algoritmos
+                      avançados e arquitetura de sistemas.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="relative pl-8 border-l-2 border-cyan-400/30">
+                  <div className="absolute left-0 top-0 -translate-x-1/2 size-4 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/50" />
+
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <span className="px-2 py-1 rounded bg-cyan-400/20 text-cyan-300 text-xs font-bold border border-cyan-400/30">
+                        2023 - 2025
+                      </span>
+                      <h3 className="text-white font-bold text-lg">Ensino Técnico</h3>
+                    </div>
+
+                    <p className="text-cyan-400 font-medium">Etec Pedro Ferreira Alves</p>
+
+                    <p className="text-slate-300 text-sm mt-3">
+                      Técnico em Análise e Desenvolvimento de Sistemas, com foco em programação back-end, banco de dados
+                      e desenvolvimento de APIs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-8">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">

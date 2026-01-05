@@ -136,6 +136,40 @@ export default function Home() {
                   </button>
                 ))}
               </div>
+               <div
+                className={`transition-all duration-1000 delay-600 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              >
+                <a
+                  href="/curriculo-nicolas-silva.pdf"
+                  download="Curriculo-Nicolas-Silva.pdf"
+                  className="group w-full flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl
+                           bg-gradient-to-r from-cyan-400 to-blue-500
+                           hover:from-cyan-500 hover:to-blue-600
+                           text-white font-semibold
+                           transition-all duration-300 ease-out
+                           hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50
+                           relative overflow-hidden"
+                >
+                  <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                  <span className="relative flex items-center gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      className="size-5 group-hover:animate-bounce"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+                      />
+                    </svg>
+                    <span>Baixar Currículo</span>
+                  </span>
+                </a>
+              </div>
             </div>
 
             <div className="space-y-6">
@@ -170,8 +204,7 @@ export default function Home() {
               <div className="grid sm:grid-cols-3 gap-4">
                 {[
                   { label: "Anos de Experiência", value: "3+", icon: "⏱️" },
-                  { label: "Projetos Completos", value: "20+", icon: "✓" },
-                  { label: "APIs Criadas", value: "15+", icon: "🔌" },
+
                 ].map((stat, idx) => (
                   <div
                     key={stat.label}
