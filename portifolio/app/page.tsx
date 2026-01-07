@@ -135,8 +135,7 @@ export default function Home() {
                     </span>
                   </button>
                 ))}
-              </div>
-               <div
+              </div>{/*<div
                 className={`transition-all duration-1000 delay-600 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               >
                 <a
@@ -169,7 +168,8 @@ export default function Home() {
                     <span>Baixar Currículo</span>
                   </span>
                 </a>
-              </div>
+              </div> */}
+               
             </div>
 
             <div className="space-y-6">
