@@ -201,23 +201,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="grid sm:grid-cols-3 gap-4">
-                {[
-                  { label: "Anos de Experiência", value: "3+", icon: "⏱️" },
-
-                ].map((stat, idx) => (
-                  <div
-                    key={stat.label}
-                    className={`rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 p-6 
-                               hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-                    style={{ transitionDelay: `${400 + idx * 150}ms` }}
-                  >
-                    <div className="text-3xl mb-2 animate-bounce-slow">{stat.icon}</div>
-                    <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-sm text-slate-400">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
+              
 
               <div
                 className={`rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 overflow-hidden transition-all duration-700 ease-in-out ${aboutVisible ? "max-h-[2000px] opacity-100 p-8" : "max-h-0 opacity-0 p-0"}`}
